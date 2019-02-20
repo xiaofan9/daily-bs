@@ -1,0 +1,87 @@
+{
+  // 代码等级 0/off 禁用 1/warn 警告 2/error 错误
+  "root": true, //  eslint找到这个标识后，不会再去父文件夹中找eslint的配置文件
+  "env": {
+    // 定义预定义的全局变量,比如browser: true，这样你在代码中可以放心使用宿主环境给你提供的全局变量。
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "amd": true
+  },
+  "globals": {
+    //全局变量
+  },
+  // "extends": "eslint:recommended", // 使用默认规则
+  "extends": [
+    "eslint:recommended", // 使用默认规则
+    "standard" // eslint-config-standard
+  ],
+  "parserOptions": {
+    // JavaScript 语言选项
+    "ecmaVersion": 6,
+    "sourceType": "module" // 源码类型
+  },
+  "plugins": [
+    // 使用的插件eslint-plugin-html. 写配置文件的时候，可以省略eslint-plugin-
+    "html",
+    "standard",
+    "promise"
+  ],
+  "rules": {
+    //参数是否需要圆括号包围
+    "arrow-parens": 0,
+    //规定generator函数中星号前后的空白
+    "generator-star-spacing": 0,
+    // 禁止 function 标识符和括号之间出现空格
+    "no-spaced-func": 2,
+    // 不使用var，使用let 或者 const 代替
+    "no-var": 2,
+    // 当变量定义后不在修改，建议使用使用const定义
+    "prefer-const": 0,
+    // 不允许空格和 tab 混合缩进
+    "no-mixed-spaces-and-tabs": 2,
+    // 文件末尾强制换行
+    "eol-last": 2,
+    // 函数定义时，function关键字后面的小括号前是否需要加空格
+    "space-before-function-paren": 0,
+    // 禁止使用多个空格
+    "no-multi-spaces": 2,
+    "no-return-await": 0,
+    // 检测是否是tab缩进
+    "no-tabs": "off",
+    // 强制在关键字前后使用一致的空格
+    "keyword-spacing": 0,
+    // 强制在圆括号内使用一致的空格
+    "space-in-parens": [2, "never"],
+    // 多行模式必须带逗号，单行模式不能带逗号 -- 警告 不强制
+    "comma-dangle": [1, "always-multiline"],
+    // 强制所有控制语句使用一致的括号风格
+    "no-trailing-spaces": 2,
+    // 不禁用console
+    "no-console": 0,
+    // 禁止定义没有使用过的变量
+    "no-unused-vars": "warn",
+    // 缩进方式
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    // 强制函数中的变量要么一起声明要么分开声明，此处设置为警告，希望能在一起声明。
+    "one-var": [
+      "error",
+      {
+        "initialized": "never"
+      }
+    ],
+    // 换行样式
+    "linebreak-style": ["error", "unix"],
+    // 强制使用一致的反勾号、双引号或单引号
+    "quotes": ["warn", "double"],
+    // 默认配置always，要求在行末加上分号。
+    "semi": ["error", "always"]
+  }
+}

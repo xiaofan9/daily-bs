@@ -1,0 +1,47 @@
+{
+  "name": "daily-zhihu",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test/*.test.js",
+    "start": "pm2 start ecosystem.config.js",
+    "dev": "set debug=daily-zhihu:* && nodemon ./bin/www",
+    "debug": "set debug=daily-zhihu:* && node ./bin/www"
+  },
+  "author": "sifan",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "^3.0.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.1.0",
+    "koa-onerror": "^3.1.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "lodash": "^4.17.10",
+    "mongoose": "^4.12.5",
+    "nunjucks": "^3.0.1",
+    "pm2": "^3.0.4",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "cors": "^2.8.4",
+    "debug": "^3.1.0",
+    "eslint": "^5.5.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^4.0.5",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "koa2-cors": "^2.0.6",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.4",
+    "portfinder": "^1.0.16",
+    "power-assert": "^1.5.0",
+    "supertest": "^3.1.0"
+  }
+}

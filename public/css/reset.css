@@ -1,0 +1,44 @@
+/*清除公共样式 */
+
+body,
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+dd,
+dt {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+/* 清理浮动 */
+
+.clear {
+  *zoom: 1;
+}
+
+.clear:after {
+  display: block;
+  clear: both;
+  content: " ";
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
